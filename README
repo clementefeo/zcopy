@@ -1,0 +1,49 @@
+## zcopy: herramienta de copia de archivos
+
+Esta herramienta permite copiar archivos de un directorio a otro, filtrando por tipo de archivo.
+
+### Funciones:
+
+* **`menu_filetypes()`**: Muestra un menú para seleccionar los tipos de archivos que se desean copiar.
+* **`menu_select_root()`**: Permite seleccionar el directorio de origen.
+* **`menu_select_target()`**: Permite seleccionar el directorio de destino.
+* **`busqueda()`**: Busca archivos con la extensión especificada dentro del directorio de origen.
+* **`busca_y_graba()`**: Realiza la copia de los archivos.
+
+### Uso:
+
+1. Ejecutar el script `zcopy.sh`.
+2. Se abrirá un menú para seleccionar los tipos de archivos a copiar.
+3. Se abrirá una ventana para seleccionar el directorio de origen.
+4. Se abrirá una ventana para seleccionar el directorio de destino.
+5. La herramienta buscará los archivos seleccionados y los copiará al directorio de destino.
+
+### Dependencias:
+
+* zenity
+* rsync
+
+### Notas:
+
+* Los archivos a copiar se guardan en un archivo temporal llamado `lista` ubicado en `/tmp`.
+* El script utiliza `rsync` para copiar los archivos.
+* El script guarda el tiempo de inicio y fin de la operación de copia.
+
+### Mejora:
+
+* Agregar más tipos de archivos a la lista.
+* Implementar la opción de excluir archivos.
+* Agregar opciones para personalizar la copia de archivos (por ejemplo, renombrar archivos, conservar permisos).
+* Crear una interfaz gráfica de usuario más amigable.
+
+### Ejemplo:
+
+```bash
+./zcopy.sh
+content_copy
+Use code with caution.
+
+Se abrirá un menú para seleccionar los tipos de archivos, se seleccionará el directorio de origen y destino, y se iniciará la copia de archivos.
+
+content_copy
+Use code with caution.
